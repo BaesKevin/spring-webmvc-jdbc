@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface GoalRepository extends CrudRepository<Goal, Integer> {
+public interface DeviceEventRepository extends CrudRepository<DeviceEvent, Integer> {
 
-  @Query(value = "select * from goal limit :limit", nativeQuery = true)
-  List<Goal> findAllWithLimit(int limit);
+  @Query(value = "select * from device_event limit :limit", nativeQuery = true)
+  List<DeviceEvent> findAllWithLimit(int limit);
 
 }

@@ -9,17 +9,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-public class Goal {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
-  private String name;
+@Data
+public class DeviceEvent {
 
-  public Goal(String name) {
-    this.name = name;
-  }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private int id;
+  private long receivedTime;
+  private long lattitude;
+  private long longitude;
+
 }

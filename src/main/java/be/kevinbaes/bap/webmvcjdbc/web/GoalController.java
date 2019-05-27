@@ -4,8 +4,9 @@ import be.kevinbaes.bap.webmvcjdbc.persistence.Goal;
 import be.kevinbaes.bap.webmvcjdbc.persistence.GoalRepository;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/goal")
-public class GoalController {
+@RestController
+@RequestMapping("/goal")
+public class  GoalController {
 
   private final GoalRepository goalRepository;
 
